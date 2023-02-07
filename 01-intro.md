@@ -112,16 +112,16 @@ Pasar valores desde un componente padre al hijo
 
 > [HooksProp.jsx](./lab01/src/HooksProp.jsx)
 
-## 6.1. Lab:
-### 6.1.1. Cambiar el titulo del botón en hooks
-### 6.1.2. Destructurar props en el Hook
+## 6.1. Lab: en Funtional.jsx
+### 6.1.1. Cambiar el titulo del botón en hooks usando props
+### 6.1.2. Destructurar props
 ### 6.1.3. Destructurar useState en el import React from "react"
-### 6.1.4. Crear un boton para decrementar el contador. Modo Hook
+### 6.1.4. Crear un boton para decrementar el contador
 ### 6.1.5. Evitar que el contador disminuya de 0
 ### 6.1.6. Agregar los estilos de App.css
-### 6.1.7. Usar los estilos "App", "App-header" y aplicar classNames
+### 6.1.7. Usar los estilos "App", "App-header" y aplicar en sus respectivos html tags usando classNames
 > Ver  ejemplo en App.js
-### 6.1.8. Agregar el siguiente css a App.css y agregar la clase button a los botones.
+### 6.1.8. Agregar el siguiente css a App.css y agregar la clase .button a los botones.
 ```css
 .button {
 	background-color: #4c84af;
@@ -149,16 +149,16 @@ Pasarle los props "buttonTitle"
 # 8. Component Callback Function
 > [CallbackFx.jsx](./lab01/src/CallbackFx.jsx)
 
-## Sibling Component: children
+## 8.1. Sibling Component: children
 
-### Instalar paquetes npm fontawesome
+### 8.1.1. Instalar paquetes npm fontawesome
 ```vim
 npm i --save @fortawesome/fontawesome-svg-core
 npm install --save @fortawesome/free-solid-svg-icons
 npm install --save @fortawesome/react-fontawesome
 ```
 
-### Usar en el proyecto
+### 8.1.2. Usar en el proyecto
 ```js
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBolt } from "@fortawesome/free-solid-svg-icons";
@@ -184,16 +184,16 @@ const demoValue = 5;
 const result = demoValue > 5 && "el valor es mayor a 5";
 console.log("result", result); // false
 ```
-## Lab:
+## 9.1. Lab:
 Ocultar el boton de disminuir cuando el contador es igual a 0.
 
-# LocalStorage: Best Practice useEffect Hook
+# 10. LocalStorage: Best Practice useEffect Hook
 > [Guide](https://blog.logrocket.com/localstorage-javascript-complete-guide/)
 
-# Custom Hook
+# 11. Custom Hook
 > [Custom Hook](./lab01/src/CustomHook.jsx)
 
-# PropTypes
+# 12. PropTypes
 > [Info](https://github.com/facebook/prop-types)
 > [PropTypes](./lab01/src/PropTypes.jsx)
 
@@ -204,23 +204,32 @@ npm install --save prop-types
 import PropTypes from 'prop-types';
 ```
 
-## Lab:
+## 12.1. Lab:
 Crear PropTypes para el componente Buttons en las propiedades count y onHandleChange
 
-# Lab: State Lifting
+# 13. Lab: State Lifting
+> [Info](https://reactjs.org/docs/lifting-state-up.html)
 Estados comunes (useCount) manejados por el componente padre
 
-## Pasar el valor de useCount al componente Input
+## 13.1. Pasar el valor de useCount al componente Input
 ```javascript
 <Input num={useCount} />
 ```
-## El componente Input debe retornar el valor del <input>, para modificar useCount
+## 13.2. El componente Input debe retornar el valor del <input>, para modificar useCount
 
-# Lists and keys
+# 14. Lists and keys
 Cuando suma o resta, debe cargar un arreglo con los valores y mostrarlos en pantalla.
 > [List.jsx](./lab01/src/List.jsx)
 
-# Router
+```js
+   <div className="listContainer">
+		{useList.map((num) => (
+			<span className="list">{num}</span>
+		))}
+	</div>
+```
+
+# 15. Router
 ```vim
 npm install react-router-dom
 ```
@@ -258,13 +267,27 @@ li a:hover {
 > [index-router](./lab01/src/index-router.js)
 
 > Nota: al navegar entre páginas, los estados que no son persistentes se reincian a su valor original, ver el arreglo de números.
-# Context
+
+## 15.1. useNavigate
+Crear un boton para volver al home
+```js
+import { useNavigate } from "react-router-dom";
+const navigate = useNavigate();
+
+const gotoHome = () => {
+	navigate("/");
+};
+
+<button onClick={() => gotoHome()}>Home</button>
+```
+
+# 16. Context
 Compartir estados globales (datos) entre componentes sin necesidad de atravezar todos los subcomponentes
 > [index.js](./lab01/src/index-context.js)
 
 > [ListContext.jsx](./lab01/src/ListContext.jsx)
 
-## Lab:
+## 16.1. Lab:
 Agregar el id y name al menu principal.
-> [index.js](./lab01/src/index-async-context.js)
+
 

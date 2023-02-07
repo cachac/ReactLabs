@@ -29,9 +29,9 @@ npm run dev
 # Crear layout/Layout.jsx
 # Crear pages/Home.jsx - Login.jsx - Admin.jsx
 # Editar main.jsx
-# Crar context/Session.jsx
+# Crear context/Session.jsx
 
-# Notification
+# Async UseEffect
 
 https://devtrium.com/posts/async-functions-useeffect
 
@@ -66,4 +66,6 @@ https://www.js-tutorials.com/react-js/simple-theming-layout-in-reactjs-using-boo
 
 # cuando usar usememo - usecallback
 https://kentcdodds.com/blog/usememo-and-usecallback
+
+# tables
 

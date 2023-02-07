@@ -30,6 +30,7 @@ const Counter = ({ title }) => {
           <FontAwesomeIcon icon={faBolt} />
         </Buttons>
 
+        {/* PROP TYPES */}
         <Input num={10} />
 
         {/* Ternary */}
