@@ -1,16 +1,32 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
-
 import { LinkContainer } from "react-router-bootstrap";
-import { Link } from "react-router-dom";
+
+import Spinner from "react-bootstrap/Spinner";
+import { useAuth } from "../context/Session";
 
 export const Layout = () => {
-  return (
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { session } = useAuth();
+  const calledOnce = useRef(false);
+
+  useEffect(() => {
+    if (calledOnce.current) return;
+
+    console.log("Navigate to Home");
+    console.log("pathname", location.pathname);
+    if (location.pathname === "/") navigate("/home");
+
+    calledOnce.current = true;
+  }, []);
+
+  return session ? (
     <>
-      <Navbar bg="dark" variant="dark" activeKey="/">
+      <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand>
             <img
@@ -23,10 +39,11 @@ export const Layout = () => {
           </Navbar.Brand>
 
           <Nav className="me-auto justify-content-center">
+            {/* <Nav.Link>Home</Nav.Link> */}
             {/* <Nav.Link>
               <Link to="/home">Home</Link>
             </Nav.Link> */}
-            <LinkContainer to="/">
+            <LinkContainer to="/home">
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>
 
@@ -45,5 +62,10 @@ export const Layout = () => {
         <Outlet />
       </Container>
     </>
+  ) : (
+    <Container className="mt-4 m-auto">
+      <h2 className="login-title">- Loading Session -</h2>
+      <Spinner animation="grow" variant="info" />
+    </Container>
   );
 };
