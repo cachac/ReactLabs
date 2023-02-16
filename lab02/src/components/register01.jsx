@@ -14,6 +14,8 @@ export default function Page({ back }) {
     const form = e.currentTarget;
     if (form.checkValidity() === false) {
       e.stopPropagation();
+
+			return
     }
 
     setValidated(true);

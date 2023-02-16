@@ -61,6 +61,7 @@ export default function Page() {
 ```
 
 # 5. Crear layout/Layout.jsx
+> [Simple layout](https://www.js-tutorials.com/react-js/simple-theming-layout-in-reactjs-using-bootstrap/)
 ```js
 import { useEffect, useState } from "react";
 import Nav from "react-bootstrap/Nav";
@@ -176,8 +177,18 @@ import { ProvideAuth } from "./context/Session";
 > [Login Validate](./lab02/src/pages/LoginFormValidate.jsx)
 
 ## Fetch (context)
->[](./lab02/src/context/SessionFetch.jsx)
+> [Login Fetch](./lab02/src/pages/LoginFetch.jsx)
+> [Session Fetch](./lab02/src/context/SessionFetch.jsx)
+> [Toast](https://react-hot-toast.com/)
 
+```main.jsx
+import { Toaster } from "react-hot-toast";
+
+  <Toaster
+		position="top-center"
+		toastOptions={{ className: "react-hot-toast" }}
+	/>
+```
 
 ## Lab: Crear un componente de Registro.
 - Solicita Nombre, email, password y comprobación.
@@ -192,8 +203,7 @@ https://www.robinwieruch.de/react-hooks-fetch-data/
 https://www.robinwieruch.de/react-fetching-data/
 https://www.freecodecamp.org/news/fetch-data-react/
 https://polvara.me/posts/fetching-asynchronous-data-with-react-hooks
-# 12. Forms
-## 12.1. Validation
+
 
 # 13. Computed properties usememo
 https://www.robinwieruch.de/react-usememo-hook/
@@ -206,11 +216,11 @@ https://www.robinwieruch.de/react-usecallback-hook/
 https://blog.logrocket.com/12-essential-eslint-rules-react/
 
 
+
 ## 15.1. dynamic routes xxx/:yyy
 
 
-layout
-https://www.js-tutorials.com/react-js/simple-theming-layout-in-reactjs-using-bootstrap/
+
 
 
 # 16. cuando usar usememo - usecallback
@@ -221,5 +231,6 @@ https://kentcdodds.com/blog/usememo-and-usecallback
 # 18. State management
 ## 18.1. Redux Toolkit
 ## 18.2. Zustand
+# API Call avanzado
 # NextJS
 # 19. Práctica Blog-Post
