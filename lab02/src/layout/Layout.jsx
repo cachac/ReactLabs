@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 export const Layout = () => {
   return (
     <>
-      <Navbar bg="dark" variant="dark" activeKey="/">
+      <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand>
             <img

@@ -1,6 +1,6 @@
 # LAB02 <!-- omit in toc -->
 
-# Vite
+# 1. Vite
 ```vim
 npm create vite@latest lab02 -- --template react
 
@@ -13,33 +13,33 @@ npm install react-hot-toast
 npm run dev
 ```
 
-## Editar vite.confg
+## 1.1. Editar vite.confg
 ```js
   server: { port: 8080 }
 ```
 
-# Eliminar los archivos  App.jsx, index.css, App.css
-# Crear los directorios
+# 2. Eliminar los archivos  App.jsx, index.css, App.css
+# 3. Crear los directorios
 - pages
 - layout
 - components
 - context
 
 
-# Crear en pages/
-## Home.jsx
+# 4. Crear en pages/
+## 4.1. Home.jsx
 ```js
 export default function Home() {
   return <div>Home</div>;
 }
 ```
-## Login.jsx
+## 4.2. Login.jsx
 ```js
 export default function Login() {
   return <div>Login</div>;
 }
 ```
-## Admin.jsx
+## 4.3. Admin.jsx
 ```js
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -60,7 +60,7 @@ export default function Page() {
 
 ```
 
-# Crear layout/Layout.jsx
+# 5. Crear layout/Layout.jsx
 ```js
 import { useEffect, useState } from "react";
 import Nav from "react-bootstrap/Nav";
@@ -114,7 +114,7 @@ export const Layout = () => {
 
 ```
 
-# Editar main.jsx
+# 6. Editar main.jsx
 ```js
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -146,13 +146,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 );
 
 ```
-# Context Session
+# 7. Context Session
 >  [Async UseEffect](https://devtrium.com/posts/async-functions-useeffect)
 > [Auth](https://usehooks.com/useAuth/)
-# Crear context/Session.jsx
+# 8. Crear context/Session.jsx
 > [Session](./lab02/src/context/Session.jsx)
 
-# Agregar El "Provider" en main.jsx
+# 9. Agregar El "Provider" en main.jsx
 ```js
 import { ProvideAuth } from "./context/Session";
 
@@ -163,51 +163,63 @@ import { ProvideAuth } from "./context/Session";
  </ProvideAuth>
 ```
 
-# Utilizar useAuth Context en Admin.jsx
+# 10. Utilizar useAuth Context en Admin.jsx
 > [Admin Session](./lab02/src/pages/AdminSessionContext.jsx)
 
 
+# Login Form
+> [Grid System](https://getbootstrap.com/docs/4.0/layout/grid/)
+> [Forms](./lab02/src/pages/LoginForm.jsx)
+
+## Validation
+> [Forms Validation](https://react-bootstrap.github.io/forms/validation/)
+> [Login Validate](./lab02/src/pages/LoginFormValidate.jsx)
+
+## Fetch (context)
+>[](./lab02/src/context/SessionFetch.jsx)
+
+
+## Lab: Crear un componente de Registro.
+- Solicita Nombre, email, password y comprobación.
+- Botón de volver a login
+> [Login-Register](./lab02/src/pages/LoginRegister.jsx)
 
 
 
 
-
-
-
-
-# fetch data
+# 11. fetch data
 https://www.robinwieruch.de/react-hooks-fetch-data/
 https://www.robinwieruch.de/react-fetching-data/
 https://www.freecodecamp.org/news/fetch-data-react/
 https://polvara.me/posts/fetching-asynchronous-data-with-react-hooks
-# Forms
-## Validation
+# 12. Forms
+## 12.1. Validation
 
-# Computed properties usememo
+# 13. Computed properties usememo
 https://www.robinwieruch.de/react-usememo-hook/
 
-# usecallback
+# 14. usecallback
 https://www.robinwieruch.de/react-usecallback-hook/
 
 
-# eslint rules
+# 15. eslint rules
 https://blog.logrocket.com/12-essential-eslint-rules-react/
 
 
-## dynamic routes xxx/:yyy
+## 15.1. dynamic routes xxx/:yyy
 
 
 layout
 https://www.js-tutorials.com/react-js/simple-theming-layout-in-reactjs-using-bootstrap/
 
 
-# cuando usar usememo - usecallback
+# 16. cuando usar usememo - usecallback
 https://kentcdodds.com/blog/usememo-and-usecallback
 
-# tables
+# 17. tables
 
-# State management
-## Redux Toolkit
-## Zustand
-
-# Práctica Blog-Post
+# 18. State management
+## 18.1. Redux Toolkit
+## 18.2. Zustand
+# NextJS
+# 19. Práctica Blog-Post
