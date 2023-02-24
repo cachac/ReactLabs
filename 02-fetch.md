@@ -43,16 +43,16 @@ export default function Login() {
 ```js
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { useNavigate } from "react-router-dom";
 
 export default function Page() {
+  const navigate = useNavigate();
   return (
-    <Card className="m-auto" style={{ width: "18rem" }}>
+    <Card className="m-auto" style={{ width: "20rem" }}>
       <Card.Body>
-        <Card.Title>No Autorizado 👾</Card.Title>
-        <Card.Text>Debe registrar se para acceder a esta página.</Card.Text>
-        <Button variant="primary" onClick={() => navigate("/login")}>
-          Login
-        </Button>
+        <Card.Title> No autorizado 🤖</Card.Title>
+        <Card.Text> Debe registrar para acceder a esta página</Card.Text>
+        <Button onClick={() => navigate("/login")}>Login</Button>
       </Card.Body>
     </Card>
   );
@@ -193,7 +193,7 @@ import { Toaster } from "react-hot-toast";
 ## Lab: Crear un componente de Registro.
 - Solicita Nombre, email, password y comprobación.
 - Botón de volver a login
-> [Login-Register](./lab02/src/pages/LoginRegister.jsx)
+> [Login-Register](./lab02/src/components/register02.jsx)
 
 
 
@@ -217,20 +217,18 @@ https://blog.logrocket.com/12-essential-eslint-rules-react/
 
 
 
-## 15.1. dynamic routes xxx/:yyy
-
-
-
-
 
 # 16. cuando usar usememo - usecallback
 https://kentcdodds.com/blog/usememo-and-usecallback
 
 # 17. tables
+## 15.1. dynamic routes xxx/:yyy
 
 # 18. State management
 ## 18.1. Redux Toolkit
 ## 18.2. Zustand
 # API Call avanzado
+## Axios
+
 # NextJS
 # 19. Práctica Blog-Post
