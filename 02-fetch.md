@@ -235,11 +235,11 @@ const ListItem = ({ item }) => {
 - Validar console.log
 - La función de filtro causa re-render (10x)
 
-### 12.2.1. Cambiar el valor index del for a 1000
+### 12.2.1. Opcional. Crear una función para crear un array de strings de 1000 elementos
 - Validar el re-render (1000x)
 - La aplicación se comporta lenta
 
-### usar useMemo
+### 12.2.2. usar useMemo
 ```js
   const filteredUsers = useMemo(
     () =>
@@ -250,13 +250,45 @@ const ListItem = ({ item }) => {
     [search]
   );
 ```
+- La función se ejecuta solo cuando "search" es actualizado.
+- No se ejecuta con el cambio del input
+
+
+
+# 14. useCallback (Funciones, componentes)
+> [UseCalback](./lab02/pages/../src/pages/UseCallback.jsx)
+
+- Causa re-render en todos los componentes con cada input.
+
+## Aplicar memo (lab anterior)
+```js
+const List = memo(({ list, onRemove }) => {
+  console.log('Render: List');
+  return (
+    <ul>
+      {list.map((item) => (
+        <ListItem key={item.id} item={item} onRemove={onRemove} />
+      ))}
+    </ul>
+  );
+});
+
+const ListItem = memo(({ item, onRemove }) => {
+  console.log('Render: ListItem');
+  return (
+    <li>
+      {item.name}
+      <button type="button" onClick={() => onRemove(item.id)}>
+        Remove
+      </button>
+    </li>
+  );
+});
+```
 
 
 # 13. cuando usar usememo - usecallback
 https://kentcdodds.com/blog/usememo-and-usecallback
-
-# 14. usecallback
-https://www.robinwieruch.de/react-usecallback-hook/
 
 # 15. fetch data
 https://www.robinwieruch.de/react-hooks-fetch-data/

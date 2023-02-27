@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Admin from "./pages/Admin";
 import Memo from "./pages/Memo";
-import UseMemo from "./pages/UseMemo";
+import UseCallback from "./pages/UseCallback";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ProvideAuth } from "./context/Session";
@@ -19,7 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/" element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="admin" element={<Admin />} />
-          <Route path="memo" element={<UseMemo />} />
+          <Route path="memo" element={<UseCallback />} />
           <Route
             path="*"
             element={
