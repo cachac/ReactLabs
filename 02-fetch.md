@@ -255,12 +255,12 @@ const ListItem = ({ item }) => {
 
 
 
-# 14. useCallback (Funciones, componentes)
+# 13. useCallback (Funciones, componentes)
 > [UseCalback](./lab02/pages/../src/pages/UseCallback.jsx)
 
 - Causa re-render en todos los componentes con cada input.
 
-## Aplicar memo (lab anterior)
+## 13.1. Aplicar memo (lab anterior)
 ```js
 const List = memo(({ list, onRemove }) => {
   console.log('Render: List');
@@ -285,33 +285,41 @@ const ListItem = memo(({ item, onRemove }) => {
   );
 });
 ```
+- Continua el re-render de los componentes, debido al onRemove callback
+
+## 13.2. Aplicar el useCallback
+> [callback](https://kentcdodds.com/blog/usememo-and-usecallback)
+
+```js
+ const handleRemove = useCallback(
+    (id) => setUsers(users.filter((user) => user.id !== id)),
+    [users]
+  );
+```
+- El input no causa re-render
+- El botón remove causa re-render
 
 
-# 13. cuando usar usememo - usecallback
-https://kentcdodds.com/blog/usememo-and-usecallback
 
-# 15. fetch data
-https://www.robinwieruch.de/react-hooks-fetch-data/
+# 14. fetch data
 https://www.robinwieruch.de/react-fetching-data/
+https://www.robinwieruch.de/react-hooks-fetch-data/
 https://www.freecodecamp.org/news/fetch-data-react/
 https://polvara.me/posts/fetching-asynchronous-data-with-react-hooks
 
-# 16. eslint rules
+
+# 15. tables
+## 15.1. dynamic routes xxx/:yyy
+
+# 16. State management
+## 16.1. Redux Toolkit
+## 16.2. Zustand
+# 17. API Call avanzado
+## 17.1. Axios
+
+# 18. eslint rules
 https://blog.logrocket.com/12-essential-eslint-rules-react/
 
 
-
-
-
-
-# 17. tables
-## 17.1. dynamic routes xxx/:yyy
-
-# 18. State management
-## 18.1. Redux Toolkit
-## 18.2. Zustand
-# 19. API Call avanzado
-## 19.1. Axios
-
-# 20. NextJS
-# 21. Práctica Blog-Post
+# 19. NextJS
+# 20. Práctica Blog-Post
