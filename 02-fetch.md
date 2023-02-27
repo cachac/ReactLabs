@@ -302,11 +302,17 @@ const ListItem = memo(({ item, onRemove }) => {
 
 
 # 14. fetch data
-https://www.robinwieruch.de/react-fetching-data/
-https://www.robinwieruch.de/react-hooks-fetch-data/
-https://www.freecodecamp.org/news/fetch-data-react/
-https://polvara.me/posts/fetching-asynchronous-data-with-react-hooks
+> [fetching-class](https://www.robinwieruch.de/react-fetching-data/)
+> [fetching-hooks](https://www.robinwieruch.de/react-hooks-fetch-data/)
 
+- Basic Fetch
+> [Demo fetch](./lab02/src/pages/DemoFetch.jsx)
+
+- Error handler + loader
+> [Demo fetch](./lab02/src/pages/DemoFetch2.jsx)
+
+## 14.1. Custom React Hook: useFetch
+https://www.freecodecamp.org/news/fetch-data-react/
 
 # 15. tables
 ## 15.1. dynamic routes xxx/:yyy
