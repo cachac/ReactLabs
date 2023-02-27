@@ -168,15 +168,15 @@ import { ProvideAuth } from "./context/Session";
 > [Admin Session](./lab02/src/pages/AdminSessionContext.jsx)
 
 
-# Login Form
+# 11. Login Form
 > [Grid System](https://getbootstrap.com/docs/4.0/layout/grid/)
 > [Forms](./lab02/src/pages/LoginForm.jsx)
 
-## Validation
+## 11.1. Validation
 > [Forms Validation](https://react-bootstrap.github.io/forms/validation/)
 > [Login Validate](./lab02/src/pages/LoginFormValidate.jsx)
 
-## Fetch (context)
+## 11.2. Fetch (context)
 > [Login Fetch](./lab02/src/pages/LoginFetch.jsx)
 > [Session Fetch](./lab02/src/context/SessionFetch.jsx)
 > [Toast](https://react-hot-toast.com/)
@@ -190,45 +190,96 @@ import { Toaster } from "react-hot-toast";
 	/>
 ```
 
-## Lab: Crear un componente de Registro.
+## 11.3. Lab: Crear un componente de Registro.
 - Solicita Nombre, email, password y comprobación.
 - Botón de volver a login
 > [Login-Register](./lab02/src/components/register02.jsx)
 
+# 12. Hooks avanzados
+## 12.1. React Memo (Componentes)
+> [Memo](./lab02/src/Memo.jsx)
+
+- Validar console.log
+- El componente se re-renderiza con cada input de teclado.
+- Componente App se actualiza y obliga a sus componentes hijos a actualizar.
+- Utilizar React memo cuando el re-render sea muy lento
+
+```js
+const List = memo(({ list }) => {
+  console.log('Render: List');
+  return (
+    <ul>
+      {list.map((item) => (
+        <ListItem key={item.id} item={item} />
+      ))}
+    </ul>
+  );
+});
+
+const ListItem = ({ item }) => {
+  console.log('Render: ListItem');
+  return <li>{item.name}</li>;
+};
+```
+- Solo el componente app es actualizado
+- Los componentes hijos son "Memorizados" y no hacen re-render.
+- La lista hace una comparación de su estado actual vs el nuevo estado, si son iguales no hace re-render.
+- Cuando agrega un nuevo item causa el re-render de todos los componentes afectados.
+- El costo de la comparación del React memo suele ser mayor al comportamiento por defecto (re-render)
 
 
 
-# 11. fetch data
+## 12.2. UseMemo (Funciones y valores de retorno)
+> [useMemo](./lab02/pages/../src/pages/UseMemo.jsx)
+
+- Validar console.log
+- La función de filtro causa re-render (10x)
+
+### 12.2.1. Cambiar el valor index del for a 1000
+- Validar el re-render (1000x)
+- La aplicación se comporta lenta
+
+### usar useMemo
+```js
+  const filteredUsers = useMemo(
+    () =>
+      users.filter((user) => {
+        console.log('Filter function is running ...');
+        return user.name.toLowerCase().includes(search.toLowerCase());
+      }),
+    [search]
+  );
+```
+
+
+# 13. cuando usar usememo - usecallback
+https://kentcdodds.com/blog/usememo-and-usecallback
+
+# 14. usecallback
+https://www.robinwieruch.de/react-usecallback-hook/
+
+# 15. fetch data
 https://www.robinwieruch.de/react-hooks-fetch-data/
 https://www.robinwieruch.de/react-fetching-data/
 https://www.freecodecamp.org/news/fetch-data-react/
 https://polvara.me/posts/fetching-asynchronous-data-with-react-hooks
 
-
-# 13. Computed properties usememo
-https://www.robinwieruch.de/react-usememo-hook/
-
-# 14. usecallback
-https://www.robinwieruch.de/react-usecallback-hook/
-
-
-# 15. eslint rules
+# 16. eslint rules
 https://blog.logrocket.com/12-essential-eslint-rules-react/
 
 
 
 
-# 16. cuando usar usememo - usecallback
-https://kentcdodds.com/blog/usememo-and-usecallback
+
 
 # 17. tables
-## 15.1. dynamic routes xxx/:yyy
+## 17.1. dynamic routes xxx/:yyy
 
 # 18. State management
 ## 18.1. Redux Toolkit
 ## 18.2. Zustand
-# API Call avanzado
-## Axios
+# 19. API Call avanzado
+## 19.1. Axios
 
-# NextJS
-# 19. Práctica Blog-Post
+# 20. NextJS
+# 21. Práctica Blog-Post
