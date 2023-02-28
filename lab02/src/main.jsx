@@ -4,12 +4,13 @@ import { Layout } from "./layout/Layout";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Admin from "./pages/Admin";
-import Memo from "./pages/Memo";
-import DemoFetch from "./pages/DemoTableComponent";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ProvideAuth } from "./context/Session";
 import { Toaster } from "react-hot-toast";
+// import Memo from "./pages/Memo";
+// import DemoFetch from "./pages/DemoTableComponent";
+// import ItemDemo from "./pages/ItemDemo";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -19,7 +20,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/" element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="admin" element={<Admin />} />
-          <Route path="memo" element={<DemoFetch />} />
+          {/* <Route path="memo" element={<DemoFetch />} /> */}
+          {/* <Route path="item/:id" element={<ItemDemo />} /> */}
           <Route
             path="*"
             element={

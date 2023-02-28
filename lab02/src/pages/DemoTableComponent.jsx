@@ -2,6 +2,7 @@ import React, { useState, useMemo } from "react";
 import { useFetch } from "../hooks/Fetch";
 import Card from "react-bootstrap/Card";
 import DataTable from "../components/dataTable";
+// import { useNavigate } from "react-router-dom";
 
 function App() {
   const [query, setQuery] = useState("react");
@@ -10,6 +11,7 @@ function App() {
     "https://hn.algolia.com/api/v1/search?query=react",
     []
   );
+  // const navigate = useNavigate();
 
   const columns = useMemo(
     () => [
@@ -76,6 +78,7 @@ function App() {
           <DataTable
             columns={columns}
             data={filteredData}
+            // rowClick={(id) => navigate(`/item/id:${id}`)}
           ></DataTable>
         </Card>
       )}

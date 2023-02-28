@@ -55,10 +55,9 @@ function DataTable({ columns, data, rowClick }) {
     useSortBy
   );
 
-  const sendRowClick = (_id) => {
+  const sendRowClick = (id) => {
     if (rowClick) {
-      if (setRowIsActive) setRowIsActive(_id);
-      rowClick(_id);
+      rowClick(id);
     }
   };
 
@@ -93,7 +92,7 @@ function DataTable({ columns, data, rowClick }) {
             return (
               <tr
                 {...row.getRowProps()}
-                onClick={() => sendRowClick(row.original._id)}
+                onClick={() => sendRowClick(row.original.objectID)}
               >
                 {row.cells.map((cell) => {
                   return (

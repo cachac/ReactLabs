@@ -351,21 +351,32 @@ export default function Page() {
 	columns={columns}
 	data={filteredData}
 	/* ROW click PROP */
-	rowClick={(_id) => navigate(`/item/${_id}`)}
+	rowClick={(id) => navigate(`/item/id:${id}`)}
 ></DataTable>
 ```
-> [Routes]()
 
-## 15.6. Lab. Abrir un Blog Post
-# 16. State management
-## 16.1. Redux Toolkit
-## 16.2. Zustand
-# 17. API Call avanzado
-## 17.1. Axios
+- main.js, agregar ruta "item"
+```js
+  import ItemDemo from "./pages/ItemDemo";
 
-# 18. eslint rules
+  <Route path="item/:id" element={<ItemDemo />} />
+```
+
+> [Dynamic Route](./lab02/src/pages/ItemDemo.jsx)
+
+# 16. Route Animation
+
+
+## 16.1. Lab. Abrir un Blog Post
+# 17. State management
+## 17.1. Redux Toolkit
+## 17.2. Zustand
+# 18. API Call avanzado
+## 18.1. Axios
+
+# 19. eslint rules
 https://blog.logrocket.com/12-essential-eslint-rules-react/
 
 
-# 19. NextJS
-# 20. Práctica Blog-Post
+# 20. NextJS
+# 21. Práctica Blog-Post
