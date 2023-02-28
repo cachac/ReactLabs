@@ -17,6 +17,7 @@ const App = () => {
 
   const handleAddUser = () => {
     setUsers([{ id: uuidv4(), name: text }, ...users]);
+    setText("");
   };
 
   return (

@@ -19,27 +19,27 @@ const App = () => {
   const [search, setSearch] = React.useState("");
   const [users, setUsers] = useState(initialValues);
 
-  // const characters =
-  //   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+// const characters =
+//   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-  // const generateString = (length) => {
-  //   let result = " ";
-  //   const charactersLength = characters.length;
-  //   for (let i = 0; i < length; i++) {
-  //     result += characters.charAt(Math.floor(Math.random() * charactersLength));
-  //   }
+// const generateString = (length) => {
+//   let result = " ";
+//   const charactersLength = characters.length;
+//   for (let i = 0; i < length; i++) {
+//     result += characters.charAt(Math.floor(Math.random() * charactersLength));
+//   }
 
-  //   return result;
-  // };
+//   return result;
+// };
 
-  // useEffect(() => {
-  //   const list = [];
-  //   for (let index = 0; index < 10; index++) {
-  //     list.push({ id: uuidv4(), name: generateString(5) });
-  //   }
-  //   setUsers(list);
-  //   console.log("Initial render ✅");
-  // }, []);
+// React.useEffect(() => {
+//   const list = [];
+//   for (let index = 0; index < 10; index++) {
+//     list.push({ id: uuidv4(), name: generateString(5) });
+//   }
+//   setUsers(list);
+//   console.log("Initial render ✅");
+// }, []);
 
   const handleText = (event) => {
     setText(event.target.value);

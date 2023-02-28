@@ -312,10 +312,12 @@ const ListItem = memo(({ item, onRemove }) => {
 > [Demo fetch](./lab02/src/pages/DemoFetch2.jsx)
 
 ## 14.1. Custom React Hook: useFetch
-https://www.freecodecamp.org/news/fetch-data-react/
+> [Custom Fetching](https://www.freecodecamp.org/news/fetch-data-react/)
 
-# 15. tables
-## 15.1. dynamic routes xxx/:yyy
+> [Fetch Hook](./lab02/src/hooks/Fetch.jsx)
+> [Demo fetch](./lab02/src/pages/DemoFetchHook.jsx)
+# 15. Tables
+## 15.1. Dynamic routes xxx/:yyy
 
 # 16. State management
 ## 16.1. Redux Toolkit
