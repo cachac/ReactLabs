@@ -181,7 +181,8 @@ import { ProvideAuth } from "./context/Session";
 > [Session Fetch](./lab02/src/context/SessionFetch.jsx)
 > [Toast](https://react-hot-toast.com/)
 
-```main.jsx
+- main.jsx
+```js
 import { Toaster } from "react-hot-toast";
 
   <Toaster
@@ -316,9 +317,46 @@ const ListItem = memo(({ item, onRemove }) => {
 
 > [Fetch Hook](./lab02/src/hooks/Fetch.jsx)
 > [Demo fetch](./lab02/src/pages/DemoFetchHook.jsx)
-# 15. Tables
-## 15.1. Dynamic routes xxx/:yyy
 
+## 14.2. Lab. Get Blog Posts (api)
+# 15. Tables
+> [React Table](https://react-table-v7.tanstack.com/docs/quick-start#applying-the-table-instance-to-markup)
+```vim
+ npm i styled-components
+ npm i react-table
+ npm i @fortawesome/fontawesome-free
+```
+## 15.1. Simple
+> [Simple Data Table](./lab02/src/pages/DemoTable.jsx)
+
+## 15.2. Columns and Search
+> [Search Data Table](./lab02/src/pages/DemoTableSearch.jsx)
+## 15.3. Data Table Component
+> [Demo Component](./lab02/src/pages/DemoTableComponent.jsx)
+> [Data Table Component](./lab02/src/components/dataTable.jsx)
+
+## 15.4. Lab. Cargar Blog Post en la tabla en la página /Admin
+## 15.5. Dynamic routes xxx/:yyy
+### 15.5.1. Add useNavigate
+```js
+import { useNavigate } from "react-router-dom";
+
+export default function Page() {
+  const navigate = useNavigate();
+```
+
+### 15.5.2. Add rowClick Prop
+```js
+<DataTable
+	columns={columns}
+	data={filteredData}
+	/* ROW click PROP */
+	rowClick={(_id) => navigate(`/item/${_id}`)}
+></DataTable>
+```
+> [Routes]()
+
+## 15.6. Lab. Abrir un Blog Post
 # 16. State management
 ## 16.1. Redux Toolkit
 ## 16.2. Zustand
