@@ -318,7 +318,7 @@ const ListItem = memo(({ item, onRemove }) => {
 > [Fetch Hook](./lab02/src/hooks/Fetch.jsx)
 > [Demo fetch](./lab02/src/pages/DemoFetchHook.jsx)
 
-## 14.2. Lab. Get Blog Posts (api)
+## 14.2. Lab. Get Blog Posts en la página /Home (api)
 # 15. Tables
 > [React Table](https://react-table-v7.tanstack.com/docs/quick-start#applying-the-table-instance-to-markup)
 ```vim
@@ -365,15 +365,18 @@ export default function Page() {
 > [Dynamic Route](./lab02/src/pages/ItemDemo.jsx)
 
 ## 15.6. Lab. Abrir un Blog Post
+
+# 17. API Call avanzado
+## 17.1. Axios
 # 16. State management
 ## 16.1. Redux Toolkit
 ## 16.2. Zustand
-# 17. API Call avanzado
-## 17.1. Axios
+
 
 
 
 # 18. NextJS
+## Deploy Vercel?
 # 19. eslint rules
 https://blog.logrocket.com/12-essential-eslint-rules-react/
 # 20. Práctica Blog-Post
