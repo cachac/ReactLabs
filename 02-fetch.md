@@ -366,17 +366,162 @@ export default function Page() {
 
 ## 15.6. Lab. Abrir un Blog Post
 
-# 17. API Call avanzado
-## 17.1. Axios
-# 16. State management
-## 16.1. Redux Toolkit
-## 16.2. Zustand
+# 16. Fetch avanzado
+## 16.1. Session headers
+> [Fetch](./lab02/src/hooks/Fetch-headers.jsx)
+> [Home](./lab02/src/pages/HomePost1.jsx)
+### 16.1.1. Check line 20 & 22:
+```js
+...(session?.token && { Authorization: `Bearer ${session.token}` }),
+
+...(method === "POST" && {
+			body: JSON.stringify({
+				_id: query,
+			}),
+```
+
+
+Use: Home.jsx ej.
+```js
+import { useFetch } from "../hooks/Fetch";
+...
+const { data, isLoading, isError, runFetch } = useFetch();
+...
+useEffect(() => {
+	runFetch({ url: `http://localhost:3001/post/readAll`, method: "GET" });
+}, []);
+```
+# 17. Axios Hook
+> [Axios Hook](./lab02/src/hooks/Axios.jsx)
+Use:
+```js
+import useAxios from '../hooks/Axios';
+const { data, isLoading, isError, runAxios } = useAxios();
+useEffect(() => {
+	runAxios('/post/readAll'); // ,GET: default method | "POST"
+}, []);
+```
+
+# 18. State management
+## 18.1. Redux Toolkit
+> [info](https://redux-toolkit.js.org/)
+> [redux old](https://dev.to/chrisachard/redux-crash-course-with-hooks-a54)
+```
+npm install @reduxjs/toolkit react-redux
+```
+## 18.2. Home form demo
+Llenar el campo nombre y navegar entre las páginas del proyecto.
+
+> La variable "name" no persiste su estado.
+> La variable "name" no se puede utilizar fuera de home.jsx
+```js
+import Form from "react-bootstrap/Form";
+export default function Page() {
+	const [name, setName] = useState("");
+	return (
+		 <Form>
+        <Form.Group className="mb-3">
+          <Form.Label>Name</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </Form.Group>
+      </Form>
+	)
+}
+
+```
+## 18.3. src/store folder
+> [redux slice](./lab02/src/store/formSlice.js)
+
+## 18.4. redux index
+> [redux index](./lab02/src/store/redux-index.js)
+
+## 18.5. redux Provider
+main.js
+```js
+import { store } from "./store/redux-index";
+import { Provider } from "react-redux";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <Provider store={store}>
+		...
+		</Provider>
+		...
+```
+
+## 18.6. Fix Home form state
+```js
+import { setName } from "../store/formSlice";
+import { useSelector, useDispatch } from "react-redux";
+
+export default function Page() {
+	const { name } = useSelector((state) => state.form);
+  const dispatch = useDispatch();
+
+  ...
+	<Form.Control
+		...
+		onChange={(e) => dispatch(setName(e.target.value))}
+	/>
+```
+
+## 18.7. Lab. Agregar al Store la variable apellidos y crear el Input en el Form.
+
+## 18.8. Post State & Async Fetch
+```
+npm install nprogress
+```
+### 18.8.1. service/ApiClient (Axios)
+> [axios service](./lab02/src/service/apiClient.js)
+
+### 18.8.2. post asyn thunk
+> [postSlice](./lab02/src/store/postSlice.js)
+
+> agregar postSlice a redux-index
+
+### 18.8.3. Home: agregar el postSlice
+```js
+import { readAll } from "../store/postSlice";
+...
+  const {
+    isLoading,
+    isError,
+    errorMessage,
+    list: data,
+  } = useSelector((state) => state.post);
+
+	useEffect(() => {
+	// runFetch({ url: `http://localhost:3001/post/readAll`, method: "GET" });
+	dispatch(readAll());
+
+	...
+	{isError && <div>{errorMessage}</div>}
+}, []);
+```
+
+### 18.8.4. Opcional, cargar la lista del store (cache)
+```js
+const {list} = thunkAPI.getState().post;
+if (list.length) {
+	console.log("get list from cache ⏩");
+
+	return list;
+}
+```
+## 18.9. Lab. En home, crear un botón para recargar la lista (refresh)
+
+## 18.10. Zustand
 
 
 
 
-# 18. NextJS
-## Deploy Vercel?
-# 19. eslint rules
+# 19. NextJS
+## 19.1. Deploy Vercel?
+# 20. eslint rules
 https://blog.logrocket.com/12-essential-eslint-rules-react/
-# 20. Práctica Blog-Post
+# 21. Práctica Blog-Post
