@@ -534,14 +534,3 @@ useEffect(() => {
 
 ```
 
-
-# 19. NextJS
-## 19.1. Deploy Vercel?
-# 20. eslint rules
-https://blog.logrocket.com/12-essential-eslint-rules-react/
-# 21. Práctica Blog-Post (CRUD)
-## 21.1. Create post
-## 21.2. Read post
-## 21.3. Update post
-## 21.4. Delete post
-# 22. Admin Page: Infinity scroll
