@@ -291,3 +291,5 @@ Compartir estados globales (datos) entre componentes sin necesidad de atravezar 
 Agregar el id y name al menu principal.
 
 
+# 6. Opcional: eslint rules
+> [rules](https://blog.logrocket.com/12-essential-eslint-rules-react/)
