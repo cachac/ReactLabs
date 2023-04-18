@@ -516,12 +516,32 @@ if (list.length) {
 ## 18.9. Lab. En home, crear un botón para recargar la lista (refresh)
 
 ## 18.10. Zustand
+```
+npm install zustand
+```
+> [post](./lab02/src/store/zu-post.js)
+ ### Home zustand
+```js
+import { postStore } from "../store/zu-post";
+...
+const { list: data, isLoading, getList } = postStore();
+...
+useEffect(() => {
+	// runFetch({ url: `http://localhost:3001/post/readAll`, method: "GET" });
+	// dispatch(readAll());
+	getList()
+}, []);
 
-
+```
 
 
 # 19. NextJS
 ## 19.1. Deploy Vercel?
 # 20. eslint rules
 https://blog.logrocket.com/12-essential-eslint-rules-react/
-# 21. Práctica Blog-Post
+# 21. Práctica Blog-Post (CRUD)
+## 21.1. Create post
+## 21.2. Read post
+## 21.3. Update post
+## 21.4. Delete post
+# 22. Admin Page: Infinity scroll

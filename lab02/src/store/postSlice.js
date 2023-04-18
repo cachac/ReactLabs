@@ -43,10 +43,12 @@ export const postSlice = createSlice({
   extraReducers: {
     [readAll.pending]: (state, action) => {
       state.isLoading = true;
+      state.isError = false;
     },
     [readAll.fulfilled]: (state, action) => {
       state.list = action.payload;
       state.isLoading = false;
+      state.isError = false;
     },
     [readAll.rejected]: (state, action) => showError(state, action),
   },
