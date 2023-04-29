@@ -103,19 +103,21 @@ npm install -D @tailwindcss/forms
 plugins: [require("@tailwindcss/forms")],
 ```
 
-# 5. Lab: Admin dashboard
+# 5. apiClient ENV Vars
+# 6. SSR vs SSG
+# 7. Lab: Admin dashboard
 
 
 
+# 8. export static files
 
 
+# 9. Deploy Vercel
 
-# 6. Deploy Vercel
-
-# 7. Práctica Blog-Post (CRUD)
-## 7.1. Create post
-## 7.2. Read post
-## 7.3. Update post
-## 7.4. Delete post
-# 8. Admin Page: Infinity scroll
+# 10. Práctica Blog-Post (CRUD)
+## 10.1. Create post
+## 10.2. Read post
+## 10.3. Update post
+## 10.4. Delete post
+# 11. Admin Page: Infinity scroll
 

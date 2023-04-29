@@ -495,6 +495,8 @@ import { readAll } from "../store/postSlice";
     list: data,
   } = useSelector((state) => state.post);
 
+  // const { data, isLoading, isError, runFetch } = useFetch();
+
 	useEffect(() => {
 	// runFetch({ url: `http://localhost:3001/post/readAll`, method: "GET" });
 	dispatch(readAll());
@@ -520,7 +522,7 @@ if (list.length) {
 npm install zustand
 ```
 > [post](./lab02/src/store/zu-post.js)
- ### Home zustand
+ ### 18.10.1. Home zustand
 ```js
 import { postStore } from "../store/zu-post";
 ...
@@ -534,3 +536,4 @@ useEffect(() => {
 
 ```
 
+# 19. Lab, open a post (Admin page)
