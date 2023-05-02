@@ -506,7 +506,7 @@ import { readAll } from "../store/postSlice";
 }, []);
 ```
 
-### 18.8.4. Opcional, cargar la lista del store (cache)
+### 18.8.4. Cargar la lista del store (cache)
 ```js
 const {list} = thunkAPI.getState().post;
 if (list.length) {

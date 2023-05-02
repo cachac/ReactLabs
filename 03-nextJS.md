@@ -41,7 +41,8 @@ export const getStaticProps = async () => {
 - lib (api.ts)
 - _posts (.md)
 
-
+# Lab: typescrypt
+> [learn](https://learn.microsoft.com/en-us/training/modules/typescript-get-started/)
 # 3. Clean project
 ```
 npm install zustand axios nprogress react-hot-toast jwt-decode react-table styled-components @fortawesome/fontawesome-free
