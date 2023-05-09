@@ -63,7 +63,7 @@ export default function Post(/*{ post, morePosts, preview }: Props*/) {
                 createdAt={post.createdAt}
                 author={post.author}
               />
-              <PostBody content={post.content} />
+              <PostBody content={post.body} />
             </article>
           </>
         )}

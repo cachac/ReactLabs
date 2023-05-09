@@ -2,14 +2,14 @@
 
 type PostType = {
 	_id: string
-  slug: string
+  slug?: string
   title: string
   createdAt: string
-  coverImage: string
+  coverImage?: string
   author: string
-  excerpt: string
-  img: string
-  content: string
+  excerpt?: string
+  img?: string
+  body: string
 }
 
 export default PostType

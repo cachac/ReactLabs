@@ -9,7 +9,7 @@ export const postStore = create((set, get) => ({
   // isError: false,
   // errorMessage: "",
 
-  getList: () => {
+  readAll: () => {
     if (get().list.length) {
       console.log("get list from cache ⏩");
 
@@ -32,7 +32,7 @@ export const postStore = create((set, get) => ({
     set(() => ({ isLoading: true }));
 
     return apiClient
-      .post("/post/readonly-post", {_id})
+      .post("/post/readonly-post", { _id })
       .then((response) => {
         set((state) => ({ post: response.data }));
       })

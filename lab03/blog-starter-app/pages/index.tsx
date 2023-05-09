@@ -22,19 +22,19 @@ const initPost: Post = {
   coverImage: "",
   author: "",
   excerpt: "",
-  content: "",
+  body: "",
   img: "",
 };
 
 export default function Index(/*{ allPosts }*/) {
   // const heroPost = allPosts[0]
   // const morePosts = allPosts.slice(1)
-  const { list, isLoading, getList } = postStore();
+  const { list, isLoading, readAll } = postStore();
   const [heroPost, setHeroPost] = useState<Post>(initPost);
   const [morePosts, setMorePosts] = useState<Post[]>([]);
 
   useEffect(() => {
-    getList();
+    readAll();
   }, []);
 
   useEffect(() => {

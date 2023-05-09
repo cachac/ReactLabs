@@ -51,26 +51,37 @@ npm install zustand axios nprogress react-hot-toast jwt-decode react-table style
 - toaster provider
 - session context
 ```js
-<ProvideAuth>
-	<Component {...pageProps} />
-</ProvideAuth>
+  return (
+    <>
+      <Toaster
+        position="top-center"
+        toastOptions={{ className: "react-hot-toast" }}
+      />
+      <ProvideAuth>
+        <Component {...pageProps} />
+      </ProvideAuth>
+    </>
+  );
 ```
+## Create context/Session.jsx file
+> [Session](./lab03/blog-starter-app/context/Session.jsx)
 ## 3.2. interfaces/post
 ```js
 type PostType = {
-  slug: string
+	_id: string
+  slug?: string
   title: string
   createdAt: string
-  coverImage: string
+  coverImage?: string
   author: string
-  excerpt: string
-  img: string
-  content: string
+  excerpt?: string
+  img?: string
+  body: string
 }
 ```
 ## 3.3. index.tsx
-- title
-- components/intro
+- <title> tag
+- <components>/<intro> tag
 - useEffect Hook (api call)
 - - add store
 - - api call (readAll posts)

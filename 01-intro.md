@@ -170,16 +170,7 @@ import { faBolt } from "@fortawesome/free-solid-svg-icons";
 ...
 ```
 # 9. Conditional Rendering
-> [Conditional](./lab01/src/ConditionalRender.jsx)
-
-- Ternary Operator
-```js
-const demoValue = 5
-const result = demoValue < 5 ? 'el valor es menor a 5' : 'El valor es igual o mayor a 5'
-console.log('result :>> ', result);
-```
-- Optional && Operator
-```js
+> [Conditional](./lab01/src/ConditionalRender.jsx)run once
 const demoValue = 5;
 const result = demoValue > 5 && "el valor es mayor a 5";
 console.log("result", result); // false
