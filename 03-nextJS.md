@@ -41,13 +41,13 @@ export const getStaticProps = async () => {
 - lib (api.ts)
 - _posts (.md)
 
-# Lab: typescrypt
+# 3. Lab: typescrypt
 > [learn](https://learn.microsoft.com/en-us/training/modules/typescript-get-started/)
-# 3. Clean project
+# 4. Clean project
 ```
 npm install zustand axios nprogress react-hot-toast jwt-decode react-table styled-components @fortawesome/fontawesome-free
 ```
-## 3.1. _app.tsx
+## 4.1. _app.tsx
 - toaster provider
 - session context
 ```js
@@ -63,9 +63,9 @@ npm install zustand axios nprogress react-hot-toast jwt-decode react-table style
     </>
   );
 ```
-## Create context/Session.jsx file
+## 4.2. Create context/Session.jsx file
 > [Session](./lab03/blog-starter-app/context/Session.jsx)
-## 3.2. interfaces/post
+## 4.3. interfaces/post
 ```js
 type PostType = {
 	_id: string
@@ -79,33 +79,33 @@ type PostType = {
   body: string
 }
 ```
-## 3.3. index.tsx
+## 4.4. index.tsx
 - <title> tag
 - <components>/<intro> tag
 - useEffect Hook (api call)
 - - add store
 - - api call (readAll posts)
 
-## 3.4. HeroPost.tsx
-## 3.5. DateFormater.tsx
-## 3.6. MoreStories
-## 3.7. PostPreview
-## 3.8. Slug (_id)
+## 4.5. HeroPost.tsx
+## 4.6. DateFormater.tsx
+## 4.7. MoreStories
+## 4.8. PostPreview
+## 4.9. Slug (_id)
 - post interface: _id
-## 3.9. HeroPost: _id
-## 3.10. MoreStories: _id
-## 3.11. post/[_id].tsx
+## 4.10. HeroPost: _id
+## 4.11. MoreStories: _id
+## 4.12. post/[_id].tsx
 ```js
  const { post, isLoading, getPost } = postStore();
 	useEffect(() => {
 		getPost(router.query._id);
 	}, [router.query._id]);
 ```
-### 3.11.1. PostHeader
+### 4.12.1. PostHeader
 
-# 4. Login
-## 4.1. alert.tsx (login banner)
-## 4.2. Lab: login page
+# 5. Login
+## 5.1. alert.tsx (login banner)
+## 5.2. Lab: login page
 > [forms](https://github.com/tailwindlabs/tailwindcss-forms)
 ```
 npm install -D @tailwindcss/forms
@@ -115,21 +115,20 @@ npm install -D @tailwindcss/forms
 plugins: [require("@tailwindcss/forms")],
 ```
 
-# 5. apiClient ENV Vars
-# 6. SSR vs SSG
-# 7. Lab: Admin dashboard
+# 6. Lab: Admin dashboard
+
+# 7. apiClient ENV Vars
+# 8. SSR vs SSG
+
+# 9. export static files
 
 
+# 10. Deploy Vercel
 
-# 8. export static files
-
-
-# 9. Deploy Vercel
-
-# 10. Práctica Blog-Post (CRUD)
-## 10.1. Create post
-## 10.2. Read post
-## 10.3. Update post
-## 10.4. Delete post
-# 11. Admin Page: Infinity scroll
+# 11. Práctica Blog-Post (CRUD)
+## 11.1. Create post
+## 11.2. Read post
+## 11.3. Update post
+## 11.4. Delete post
+# 12. Admin Page: Infinity scroll
 

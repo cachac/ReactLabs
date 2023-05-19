@@ -52,7 +52,7 @@ export default function Login() {
               </h1>
               <form onSubmit={login} noValidate validated={validated}>
                 <div className="mb-4">
-                  <label className="block text-sm font-semibold text-gray-800">
+                  <label className="block text-sm text-gray-800">
                     Email
                   </label>
                   <input
