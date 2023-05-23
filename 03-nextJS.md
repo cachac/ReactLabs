@@ -118,17 +118,62 @@ plugins: [require("@tailwindcss/forms")],
 # 6. Lab: Admin dashboard
 
 # 7. apiClient ENV Vars
-# 8. SSR vs SSG
+.env.local
+```
+NEXT_PUBLIC_ENV=dev
+NEXT_PUBLIC_API_URL=http://20.228.195.178:3001
 
-# 9. export static files
+```
+apiClient
+```
+baseURL: process.env.NEXT_PUBLIC_API_URL,
+```
 
+## 7.1. env-cmd
+```
+npm i env-cmd
+```
 
+```
+"builddev": "env-cmd -f .env.local next build",
+```
+```
+npm run build
+```
+# 8. export static files
+```
+"builddev": "env-cmd -f .env.local next build && next export",
+```
+> check out directory
+
+```
+npm install -g http-server
+
+http-server ./out
+```
+> check in browser
+
+## 8.1. Lab: create a production build
+
+# 9. SSR vs SSG
 # 10. Deploy Vercel
+- new account
+- install Github account
+- new project
+- import github project
+  - output settings
+  - env variables
+- deploy
 
-# 11. Práctica Blog-Post (CRUD)
-## 11.1. Create post
-## 11.2. Read post
-## 11.3. Update post
-## 11.4. Delete post
-# 12. Admin Page: Infinity scroll
+# 11. Images
+- github as a static files bucket
+- database coverImage field
+- api, get coverImage
+- front, set .coverImage property
+# 12. Práctica Blog-Post (CRUD)
+## 12.1. Create post
+## 12.2. Read post
+## 12.3. Update post
+## 12.4. Delete post
+# 13. Admin Page: Infinity scroll
 
