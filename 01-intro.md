@@ -141,7 +141,7 @@ Pasar valores desde un componente padre al hijo
 # 7. Sub Components
 > [Subcomponents.jsx](./lab01/src/Subcomponents.jsx)
 
-> [components/title.jsx](lab01/components/title.jsx)
+> [components/title.jsx](./lab01/src/components/title.jsx)
 
 ## 7.1. Lab:
 ### 7.1.1. Crear el componente buttons.jsx
