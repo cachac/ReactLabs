@@ -99,7 +99,9 @@ import  Counter  from "./Functional";
 
 ## 5.2. Functional
 > [Hooks.jsx](./lab01/src/Hooks.jsx)
+
 > [Rules](https://reactjs.org/docs/hooks-rules.html)
+
 > [Strict Mode](https://reactjs.org/docs/strict-mode.html)
 ```js
 
@@ -112,7 +114,7 @@ Pasar valores desde un componente padre al hijo
 
 > [HooksProp.jsx](./lab01/src/HooksProp.jsx)
 
-## 6.1. Lab: en Funtional.jsx
+## 6.1. Lab: en Functional.jsx
 ### 6.1.1. Cambiar el titulo del botón en hooks usando props
 ### 6.1.2. Destructurar props
 ### 6.1.3. Destructurar useState en el import React from "react"
