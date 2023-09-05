@@ -172,7 +172,8 @@ import { faBolt } from "@fortawesome/free-solid-svg-icons";
 ...
 ```
 # 9. Conditional Rendering
-> [Conditional](./lab01/src/ConditionalRender.jsx)run once
+> [Conditional](./lab01/src/ConditionalRender.jsx)
+```
 const demoValue = 5;
 const result = demoValue > 5 && "el valor es mayor a 5";
 console.log("result", result); // false
@@ -284,5 +285,5 @@ Compartir estados globales (datos) entre componentes sin necesidad de atravezar 
 Agregar el id y name al menu principal.
 
 
-# 6. Opcional: eslint rules
+# 17. Opcional: eslint rules
 > [rules](https://blog.logrocket.com/12-essential-eslint-rules-react/)
