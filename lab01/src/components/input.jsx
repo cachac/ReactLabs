@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 import PropTypes from "prop-types";
 
-const Buttons = ({ num }) => {
+const Input = ({ num }) => {
   const [useText, setText] = useState(num);
 
   const handleInputChange = (e) => {
@@ -13,14 +13,15 @@ const Buttons = ({ num }) => {
   return <input type="number" value={useText} onChange={handleInputChange} />;
 };
 
-Buttons.propTypes = {
+Input.propTypes = {
   num: PropTypes.number.isRequired,
 };
 
-Buttons.defaultProps = {
+// evita el warning del prop.
+Input.defaultProps = {
   num: "Default Prop",
 };
 
 // Best Practice ({ txt = -1 })
 
-export default Buttons;
+export default Input;

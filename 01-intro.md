@@ -277,9 +277,11 @@ const gotoHome = () => {
 
 # 16. Context
 Compartir estados globales (datos) entre componentes sin necesidad de atravezar todos los subcomponentes
-> [index.js](./lab01/src/index-context.js)
 
 > [ListContext.jsx](./lab01/src/ListContext.jsx)
+
+> [index.js](./lab01/src/index-context.js)
+
 
 ## 16.1. Lab:
 Agregar el id y name al menu principal.

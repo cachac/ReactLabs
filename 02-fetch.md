@@ -149,6 +149,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 ```
 # 7. Context Session
 >  [Async UseEffect](https://devtrium.com/posts/async-functions-useeffect)
+
 > [Auth](https://usehooks.com/useAuth/)
 # 8. Crear context/Session.jsx
 > [Session](./lab02/src/context/Session.jsx)
