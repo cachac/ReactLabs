@@ -4,16 +4,19 @@ import toast from "react-hot-toast";
 
 const authContext = createContext({});
 
+// hook
 export const useAuth = () => {
   return useContext(authContext);
 };
 
+// provider
 export const ProvideAuth = ({ children }) => {
   const auth = useProvideAuth();
 
   return <authContext.Provider value={auth}>{children}</authContext.Provider>;
 };
 
+// methods & vars
 const useProvideAuth = () => {
   const [session, setSession] = useState(null);
   const navigate = useNavigate();
