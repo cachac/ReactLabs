@@ -54,8 +54,8 @@ const useProvideAuth = () => {
     if (data.accessToken) {
       localStorage.setItem("reactLabs", JSON.stringify(data.accessToken));
       toast.success("Bienvenid@");
-      navigate("/");
-    } else toast.error("Error de ingreso");
+      navigate("/admin");
+    } else toast.error(data.error || "Error de login");
   };
 
   const signUp = async ({ name, email, password }) => {

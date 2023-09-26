@@ -28,7 +28,7 @@ const useProvideAuth = () => {
 
   const getSession = async () => {
     const session = {
-      name: localStorage.getItem("name"),
+      name: localStorage.getItem("reactLabs"),
       state: true,
       id: "123",
     };
@@ -52,7 +52,7 @@ const useProvideAuth = () => {
       localStorage.setItem("reactLabs", JSON.stringify(data.accessToken));
       toast.success("Bienvenid@");
       navigate("/admin");
-    } else toast.error("Error de ingreso");
+    } else  toast.error(data.error || "Error de login");
   };
 
   const signUp = async ({ name, email, password }) => {

@@ -32,6 +32,7 @@ const App = () => {
   );
 };
 
+// FUERA DE LA PAGINA APP
 const List = ({ list }) => {
   console.log("Render: List");
 

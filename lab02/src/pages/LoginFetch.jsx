@@ -21,6 +21,7 @@ export default function Page() {
 
     if (form.checkValidity() === false) {
       e.stopPropagation();
+      setValidated(true);
       return;
     }
 

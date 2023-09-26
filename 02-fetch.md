@@ -158,11 +158,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 ```js
 import { ProvideAuth } from "./context/Session";
 
- <ProvideAuth>
 	 <BrowserRouter>
+ 		<ProvideAuth>
     ...
+ 		</ProvideAuth>
    </BrowserRouter>
- </ProvideAuth>
 ```
 
 # 10. Utilizar useAuth Context en Admin.jsx
@@ -188,7 +188,7 @@ import { Toaster } from "react-hot-toast";
 
   <Toaster
 		position="top-center"
-		toastOptions={{ className: "react-hot-toast" }}
+		{/* toastOptions={{ className: "react-hot-toast" }} */}
 	/>
 ```
 
@@ -199,7 +199,7 @@ import { Toaster } from "react-hot-toast";
 
 # 12. Hooks avanzados
 ## 12.1. React Memo (Componentes)
-> [Memo](./lab02/src/Memo.jsx)
+> [Memo](./lab02/src/pages/Memo.jsx)
 
 - Validar console.log
 - El componente se re-renderiza con cada input de teclado.
