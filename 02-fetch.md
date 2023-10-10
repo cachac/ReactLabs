@@ -228,7 +228,8 @@ const ListItem = ({ item }) => {
 - La lista hace una comparación de su estado actual vs el nuevo estado, si son iguales no hace re-render.
 - Cuando agrega un nuevo item causa el re-render de todos los componentes afectados.
 - El costo de la comparación del React memo suele ser mayor al comportamiento por defecto (re-render)
-
+## Ejemplo con 5k líneas
+> [5k](memo5k)
 
 
 ## 12.2. UseMemo (Funciones y valores de retorno)
